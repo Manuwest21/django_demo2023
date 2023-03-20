@@ -1,0 +1,24 @@
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+        {% url 'home' as url_home%}
+        {% url 'about' as url_about%}
+        {% url 'func_list' as url_func_list%}
+
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{% url 'home' %}" 
+            class="nav-link active" aria-current="page">Home
+             class="nav link {% if request.path == url_home%}active {% endif %}" </a></li>
+        <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+            {% comment %} class="nav link {% if request.path ==url_about%}active {% endif %}" {% endcomment %}
+        <li class="nav-item"><a href="{% url 'func_list' %}" 
+            class="nav-link active" aria-current="page">Fonctionalités</a></li>
+            {% comment %} class="nav link {% if request.path == url_home%}active {% endif %}" {% endcomment %}
+        {% comment %} <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li> {% endcomment %}
+      </ul>
+    </header>
+  </div>
+
+  <div class="b-example-divider"></div>

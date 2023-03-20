@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{%block content %}
+<div class="container">
+    <ul>
+        {% for func in func_list %}
+            <li>
+                <a href="/funk/func_detail/{{func.id}}">{{func.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}
